@@ -1,7 +1,7 @@
 import os 
 
 
-chanegid=os.environ['QUALIFIER']
+chanegid=os.environ['CHANGE_ID']
 
 print(chanegid)
 

@@ -4,8 +4,6 @@ pipeline {
         stage('publish info') {
             steps {
                 echo "start building"
-                QUALIFIER = "${env.CHANGE_ID}"
-                export QUALIFIER
             }
         }
         stage('Build') { 
