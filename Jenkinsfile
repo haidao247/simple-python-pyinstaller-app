@@ -1,10 +1,11 @@
 pipeline {
     agent any 
     stages {
+        stage
         stage('Build') { 
             steps {
-                sh 'python3 -m py_compile sources/add2vals.py sources/calc.py' 
-                stash(name: 'compiled-results', includes: 'sources/*.py*') 
+                echo "this is PR number ${CHANGE_ID}"
+                sh 'python3 sources/read.py' 
             }
         }
         stage('Deliver') {
