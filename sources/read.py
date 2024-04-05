@@ -1,7 +1,7 @@
 import os 
 
 
-chanegid=os.environ('CHANGE_ID')
+chanegid=os.environ('env.CHANGE_ID')
 
 print(chanegid)
 
