@@ -1,11 +1,24 @@
+
+
+
+
+
+#################
 import os 
 
 
-chanegid=os.environ['CHANGE_ID']
+class JenkinsJob:
+    def __init__(self, job_name):
+        self._job_name = job_name
+    
+    @property
+    def change_id(self):
+        return os.environ.get('CHANGE_ID', None)
 
-print(chanegid)
-
-
+# Example usage:
+job = JenkinsJob("example_job")
+print(job.change_id) 
+###################
 
 
 # repo_owner = 'haidao247'
