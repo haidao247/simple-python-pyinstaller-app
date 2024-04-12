@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('publish info') {
             steps {
-                echo "start building"           
-        }
+                echo "start building"            }
         }
         stage('Build') { 
             steps {
