@@ -1,23 +1,15 @@
+import os
 
 
 
-
-
-#################
-import os 
-
-
-class JenkinsJob:
-    def __init__(self, job_name):
-        self._job_name = job_name
-    
+class Pr:
     @property
-    def change_id(self):
-        return os.environ.get('CHANGE_ID', None)
+    def pr_id(self) -> str | None:
+        return os.getenv("CHANGE_ID")
 
-# Example usage:
-job = JenkinsJob("example_job")
-print(job.change_id) 
+
+
+print('this is PR number',Pr().pr_id)
 ###################
 
 
